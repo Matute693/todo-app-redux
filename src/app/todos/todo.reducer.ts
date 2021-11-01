@@ -4,19 +4,19 @@ import { Todo } from './models/todo.model';
 
 
 export const estadoInicial: Todo[] = [
-    new Todo('Salvar al mundo'),
-    new Todo('Vencer a Thanos'),
-    new Todo('Comprar traje de Ironman'),
+    new Todo('Ir de vacaciones'),
+    new Todo('Vivir al costa del mar'),
+    new Todo('Hacer compras'),
     new Todo('Robar escudo del Capitán América'),
 ];
 
 const _todoReducer = createReducer(estadoInicial,
   on( crear, (state, { texto }) => [...state, new Todo( texto )  ] ),
-  
+
   on( limpiarTodos, state =>  state.filter( todo => !todo.completado )  ),
 
   on ( borrar, ( state, { id } ) =>  state.filter( todo => todo.id !== id ) ),
-  
+
   on ( toggleAll, ( state, { completado } ) => state.map( todo => {
 
     return {
@@ -27,7 +27,7 @@ const _todoReducer = createReducer(estadoInicial,
   }) ) ,
 
   on(toggle, (state, { id }) => {
-    
+
     return state.map( todo => {
 
       if ( todo.id === id  ) {
@@ -43,7 +43,7 @@ const _todoReducer = createReducer(estadoInicial,
   }),
 
   on(editar, (state, { id, texto }) => {
-    
+
     return state.map( todo => {
 
       if ( todo.id === id  ) {
