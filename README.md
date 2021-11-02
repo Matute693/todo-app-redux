@@ -1,27 +1,17 @@
 # Todoapp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
+Este protecto esta realizado con [Angular CLI](https://github.com/angular/angular-cli) 
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Corre `ng serve` para un servidor de desarrollo. Navega a  `http://localhost:4200/`. 
 
-## Code scaffolding
+## Informacion del proyecto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+La aplicación Todoapp es una aplicación Angular que utiliza la libreria Ngrx (Patron Redux) para manejar el estado de la aplicacion
 
-## Build
+## Funcionalidad
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Aplicacion para agregar, modificar o eliminar elementos de una lista de tarea, en la cual podemos filtrar en 'todos', 'completados'
+y 'pendientes'. Una vez seleccionado las tareas que se suponen terminadas presionar el boton limpiar y eliminara las tareas completadas
+y el state de la aplicacion se actualiza a medida que agregamos, modificamos o eliminamos elementos de la lista.
